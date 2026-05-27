@@ -1,5 +1,5 @@
 
-# The one and only Neos9 workshop 2025 distribution
+# The one and only Neos9 workshop 2026 distribution
  
 For further information about the workshop see: https://www.neoscon.io/all-you-need-to-know/mastering-neos-9.html
 
