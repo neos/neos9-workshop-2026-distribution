@@ -24,7 +24,7 @@ prototype(Neos.Demo:Document.BlogCategory) < prototype(Neos.Demo:Document.Page) 
 
         cards = Neos.Demo:Presentation.Cards.Container {
             content = Neos.Fusion:Loop {
-                # TODO(con25) output all blog postings assosiated with this category
+                # TODO(con26) output all blog postings assosiated with this category
                 items = ${[]}
                 # items.@process.sortBy = ${value.sort("datePublished", "DESC")}
 

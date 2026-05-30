@@ -36,7 +36,7 @@
         inspector:
           group: default
     datePublished:
-      # TODO(con25) make nodeAggregate scoped
+      # TODO(con26) make nodeAggregate scoped
       type: DateTime
       ui:
         label: i18n
@@ -56,4 +56,4 @@
           group: default
       validation:
         Neos.Neos/Validation/NotEmptyValidator: {}
-  # TODO(con25) add "categories" as reference of type Neos.Demo:Document.BlogCategory
+  # TODO(con26) add "categories" as reference of type Neos.Demo:Document.BlogCategory
