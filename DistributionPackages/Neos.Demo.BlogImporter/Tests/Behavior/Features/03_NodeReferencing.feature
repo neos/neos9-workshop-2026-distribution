@@ -51,18 +51,18 @@ Feature: Consecutive import - Node Referencing
     Then I expect node aggregate identifier "demo-neos-20241028" to lead to node cs-identifier;demo-neos-20241028;{"language": "en_US"}
     And I expect this node to have the following references:
       | Name  | Node                                                 |
-      | about | cs-identifier;demo-neos-barcamp;{"language":"en_US"} |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"en_US"} |
 
     And I expect node aggregate identifier "demo-neos-20241213" to lead to node cs-identifier;demo-neos-20241213;{"language": "en_US"}
     And I expect this node to have the following references:
       | Name  | Node                                                |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
 
     When I am in workspace "live" and dimension space point {"language": "de"}
-    And I expect node aggregate identifier "demo-neos-20241213" to lead to node cs-identifier;demo-neos-20241213;{"language": "de"}                                                                                         |
+    And I expect node aggregate identifier "demo-neos-20241213" to lead to node cs-identifier;demo-neos-20241213;{"language": "de"}
     And I expect this node to have the following references:
       | Name  | Node                                             |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"de"} |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"de"} |
 
   Scenario: Second import
     When I import file "sample1" into blog "demo-neos-blog"
@@ -72,20 +72,20 @@ Feature: Consecutive import - Node Referencing
     Then I expect node aggregate identifier "demo-neos-20241028" to lead to node cs-identifier;demo-neos-20241028;{"language": "en_US"}
     And I expect this node to have the following references:
       | Name  | Node                                                |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"en_US"} |
 
     And I expect node aggregate identifier "demo-neos-20250403" to lead to node cs-identifier;demo-neos-20250403;{"language": "en_US"}
     And I expect this node to have the following references:
       | Name  | Node                                                |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
 
     When I am in workspace "live" and dimension space point {"language": "de"}
     Then I expect node aggregate identifier "demo-neos-20241028" to lead to node cs-identifier;demo-neos-20241028;{"language": "de"}
     And I expect this node to have the following references:
       | Name  | Node                                              |
-      | about | cs-identifier;demo-neos-barcamp;{"language":"de"} |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"de"} |
 
     And I expect node aggregate identifier "demo-neos-20250403" to lead to node cs-identifier;demo-neos-20250403;{"language": "de"}
     And I expect this node to have the following references:
       | Name  | Node                                             |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"de"} |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"de"} |

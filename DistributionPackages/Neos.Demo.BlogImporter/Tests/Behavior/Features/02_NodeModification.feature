@@ -58,7 +58,7 @@ Feature: Consecutive import - Node Modification
       | authorName    | "Marika Hauke"                                                                                                                                                                                        |
     And I expect this node to have the following references:
       | Name  | Node                                                |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"en_US"} |
 
     When I am in workspace "live" and dimension space point {"language": "de"}
     Then I expect node aggregate identifier "demo-neos-20241028" to lead to node cs-identifier;demo-neos-20241028;{"language": "de"}
@@ -70,4 +70,4 @@ Feature: Consecutive import - Node Modification
       | authorName    | "Marika Hauke"                                                                                                                                                                                 |
     And I expect this node to have the following references:
       | Name  | Node                                              |
-      | about | cs-identifier;demo-neos-barcamp;{"language":"de"} |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"de"} |
