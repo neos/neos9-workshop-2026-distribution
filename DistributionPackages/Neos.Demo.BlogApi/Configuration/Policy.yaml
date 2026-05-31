@@ -4,7 +4,7 @@ privilegeTargets:
   'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
 
     'Neos.Demo.BlogApi:ApiAccess':
-      matcher: 'method(Neos\Demo\BlogApi\ApiController->.*Action())'
+      matcher: 'method(Neos\Demo\BlogApi\Controller\ApiController->.*Action())'
 
 roles:
   'Neos.Flow:Everybody':
