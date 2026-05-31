@@ -50,8 +50,7 @@ prototype(Neos.Demo:Document.BlogPosting) < prototype(Neos.Demo:Document.Page) {
                 date = ${Date.format(q(node).property('datePublished'), 'd.m.Y')}
                 author = ${q(node).property('authorName')}
                 category = Neos.Fusion:Loop {
-                    # TODO(con26) render categories
-                    @context.categories = ${[]}
+                    @context.categories = ${q(node).referenceNodes('categories').get()}
                     @if.has = ${categories != []}
                     @glue = ', '
                     items = ${categories}
