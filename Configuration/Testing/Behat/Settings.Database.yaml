@@ -1,0 +1,9 @@
+Neos:
+  Flow:
+    persistence:
+      backendOptions:
+        driver: pdo_mysql
+        host: db
+        dbname: test
+        user: db
+        password: db
