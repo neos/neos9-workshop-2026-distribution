@@ -50,13 +50,13 @@ Feature: Consecutive import
     Then I expect the node aggregate "demo-neos-20241028" to exist
     And I expect this node aggregate to be of type "Neos.Demo:Document.BlogPosting"
     And I expect this node aggregate to occupy dimension space points [{"language": "en_US"}]
-    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_GB"}]
+    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_UK"}]
     And I expect this node aggregate to have the parent node aggregates ["demo-neos-blog"]
 
     Then I expect the node aggregate "demo-neos-20241213" to exist
     And I expect this node aggregate to be of type "Neos.Demo:Document.BlogPosting"
     And I expect this node aggregate to occupy dimension space points [{"language": "en_US"}, {"language": "de"}]
-    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_GB"}, {"language": "de"}]
+    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_UK"}, {"language": "de"}]
     And I expect this node aggregate to have the parent node aggregates ["demo-neos-blog"]
 
     When I am in workspace "live" and dimension space point {"language": "en_US"}
@@ -68,8 +68,8 @@ Feature: Consecutive import
       | datePublished | Date:2024-10-28T12:00:00+00:00                                      |
       | authorName    | "Marika Hauke"                                                      |
     And I expect this node to have the following references:
-      | Name  | Node                                                 |
-      | about | cs-identifier;demo-neos-barcamp;{"language":"en_US"} |
+      | Name       | Node                                                 |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"en_US"} |
 
     And I expect node aggregate identifier "demo-neos-20241213" to lead to node cs-identifier;demo-neos-20241213;{"language": "en_US"}
     And I expect this node to have the following properties:
@@ -79,8 +79,8 @@ Feature: Consecutive import
       | datePublished | Date:2024-12-13T12:00:00+00:00                                                                                                                           |
       | authorName    | "Christian Müller"                                                                                                                                       |
     And I expect this node to have the following references:
-      | Name  | Node                                                |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
+      | Name       | Node                                                |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
 
     When I am in workspace "live" and dimension space point {"language": "de"}
     Then I expect node aggregate identifier "demo-neos-20241028" to lead to no node
@@ -92,8 +92,8 @@ Feature: Consecutive import
       | datePublished | Date:2024-12-13T12:00:00+00:00                                                                                                                           |
       | authorName    | "Christian Müller"                                                                                                                                       |
     And I expect this node to have the following references:
-      | Name  | Node                                             |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"de"} |
+      | Name       | Node                                             |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"de"} |
 
   Scenario: Second import
     When I import file "sample1" into blog "demo-neos-blog"
@@ -102,12 +102,12 @@ Feature: Consecutive import
     Then I expect the node aggregate "demo-neos-20241028" to exist
     And I expect this node aggregate to be of type "Neos.Demo:Document.BlogPosting"
     And I expect this node aggregate to occupy dimension space points [{"language": "en_US"}, {"language": "de"}]
-    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_GB"}, {"language": "de"}]
+    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_UK"}, {"language": "de"}]
 
     Then I expect the node aggregate "demo-neos-20250403" to exist
     And I expect this node aggregate to be of type "Neos.Demo:Document.BlogPosting"
     And I expect this node aggregate to occupy dimension space points [{"language": "en_US"}, {"language": "de"}]
-    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_GB"}, {"language": "de"}]
+    And I expect this node aggregate to cover dimension space points [{"language": "en_US"}, {"language": "en_UK"}, {"language": "de"}]
     And I expect this node aggregate to have the parent node aggregates ["demo-neos-blog"]
 
     Then I expect the node aggregate "demo-neos-20241213" to not exist
@@ -121,8 +121,8 @@ Feature: Consecutive import
       | datePublished | Date:2024-10-28T12:00:00+00:00                                                                                                                                                                        |
       | authorName    | "Marika Hauke"                                                                                                                                                                                        |
     And I expect this node to have the following references:
-      | Name  | Node                                                |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
+      | Name       | Node                                                |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"en_US"} |
 
     And I expect node aggregate identifier "demo-neos-20250403" to lead to node cs-identifier;demo-neos-20250403;{"language": "en_US"}
     And I expect this node to have the following properties:
@@ -132,8 +132,8 @@ Feature: Consecutive import
       | datePublished | Date:2025-04-03T12:00:00+00:00                                                           |
       | authorName    | "Tobias Gruber, Robert Lemke and the Neos Team"                                          |
     And I expect this node to have the following references:
-      | Name  | Node                                                |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
+      | Name       | Node                                                |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"en_US"} |
 
     Then I expect node aggregate identifier "demo-neos-20241213" to lead to no node
 
@@ -146,8 +146,8 @@ Feature: Consecutive import
       | datePublished | Date:2024-10-28T12:00:00+00:00                                                                                                                                                                 |
       | authorName    | "Marika Hauke"                                                                                                                                                                                 |
     And I expect this node to have the following references:
-      | Name  | Node                                              |
-      | about | cs-identifier;demo-neos-barcamp;{"language":"de"} |
+      | Name       | Node                                              |
+      | categories | cs-identifier;demo-neos-barcamp;{"language":"de"} |
 
     And I expect node aggregate identifier "demo-neos-20250403" to lead to node cs-identifier;demo-neos-20250403;{"language": "de"}
     And I expect this node to have the following properties:
@@ -157,7 +157,7 @@ Feature: Consecutive import
       | datePublished | Date:2025-04-03T12:00:00+00:00                                                        |
       | authorName    | "Tobias Gruber, Robert Lemke und das Neos-Team"                                       |
     And I expect this node to have the following references:
-      | Name  | Node                                             |
-      | about | cs-identifier;demo-neos-neos-9;{"language":"de"} |
+      | Name       | Node                                             |
+      | categories | cs-identifier;demo-neos-neos-9;{"language":"de"} |
 
     Then I expect node aggregate identifier "demo-neos-20241213" to lead to no node
